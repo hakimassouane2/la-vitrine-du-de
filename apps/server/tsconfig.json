@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"paths": {
+			// since it overwrite tsconfig.base.json, needs to copy-paste it here (TODO: better solution?)
+			"@la-vitrine-du-de/db-typings": ["libs/db-typings/src/index.ts"],
+			"~/*": ["./apps/server/src/*"] // needs to precise the path relative to the tsconfig.base.json
+		}
+	},
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

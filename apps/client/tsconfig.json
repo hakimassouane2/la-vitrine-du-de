@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
+    "types": ["cypress", "jest", "node", "svelte", "twitch-ext"], // since it overwrite tsconfig.base.json, needs to copy-paste it here (TODO: better solution?)
+		"paths": {
+			"~/*": ["apps/client/src/*"], // needs to precise the path relative to the tsconfig.base.json
+			// since it overwrite tsconfig.base.json, needs to copy-paste it here (TODO: better solution?)
+			"@la-vitrine-du-de/db-typings": ["libs/db-typings/src/index.ts"]
+		}
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

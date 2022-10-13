@@ -1,0 +1,23 @@
+{
+	"root": "libs/db-typings",
+	"sourceRoot": "libs/db-typings/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["libs/db-typings/**/*.ts"]
+			}
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["coverage/libs/db-typings"],
+			"options": {
+				"jestConfig": "libs/db-typings/jest.config.js",
+				"passWithNoTests": true
+			}
+		}
+	},
+	"tags": []
+}
